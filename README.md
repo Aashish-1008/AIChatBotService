@@ -23,7 +23,7 @@ Run command: `make ai-assistant-api-server-up`
 Please Note: It might take a while starting the server and running the test cases for the firsttime. The make command will build the docker image locally for the first time.
 
 
-#### How to Access the chat reply api
+#### How to make a request to the chatbot reply api
 
 Make Sure ai-assistant-api-server up and running.
 

@@ -78,6 +78,10 @@ describe("ReplyController", function() {
         it('should return 401 statusCode if botId is invalid.', (done) => {
             chai.request(BASE_URL)
                 .post('/api/chat-rooms/1ea4df/bots/INVALID_BOT_IDENTIFIER/reply?confidenceThreshold=0.6')
+                .send({
+                    "message": "Hello",
+                    "confidenceThreshold": 0.6
+                })
                 .end((err, res) => {
                     res.should.have.status(400);
                     done();

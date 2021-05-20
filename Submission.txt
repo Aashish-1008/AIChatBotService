@@ -2,18 +2,25 @@ Coding Asssigment has been completed,
 
 I have created a backend web server using nodejs(Javascript) that exposes a single endpoint. This endpoint accepts a bot identifier, a visitor written message and confidence threshold. It returns a single reply corresponding to the highest predicted intent above the confidence threshold.I have used the publicly available AI API in order to retrieve the list of predicted intents for a given message.
 
-The api-server and mongodb are containerised using docker. Please Make sure you have all required software installed mentioned in Software Prerequisites.
+Please find link to github repo: 
+https://github.com/Aashish-1008/AIChatBotService
 
+The api-server and mongodb are containerised using docker. Please Make sure you have all required software installed mentioned in Software Prerequisites.
 I also have attached a README.md file in code repository which explains step by step guide to run the application.
 
-Guides:
+Please find link to README.md file:
+https://github.com/Aashish-1008/AIChatBotService/blob/master/README.md
 
+Guides: 
 1. Software Prerequisites 
 2. Code Setup
 3. How to Start the api-server 
 4. How to Stop the api-server
 5. How to Run the tests 
-6. How to Access the chat reply api once api-server is up. 
+6. How to make a request to the chatbot reply api 
 
 
-Please let me know if you faces any issues
+Please let me know if you faces any issues.
+
+Thanks,
+Aashish Dahiya

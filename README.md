@@ -1,6 +1,6 @@
 ## AI Chat Bot API Server Setup
 
-####Code Challenge Software Prerequisities:
+#### Code Challenge Software Prerequisities:
 1. Docker Installation, check docker installation guide here https://docs.docker.com/engine/install/
 2. Install make: Run this command in your macOS:  `brew install make`
  

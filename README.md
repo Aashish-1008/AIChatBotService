@@ -24,7 +24,9 @@ Please Note: It might take a while starting the server and running the test case
 
 
 #### How to Access the chat reply api
-Make Sure api-server up and running.
+
+Make Sure ai-assistant-api-server up and running.
+
 ##### Using Postman
 1. Import the collection `ChatBotApiCollection.postman_collection.json` file into postman. This file can be found under `AIChatBotService/postman` folder.
 2. Once Postman collection will be imported, it will list down the "POST ChatBot Reply" API. Call the api.

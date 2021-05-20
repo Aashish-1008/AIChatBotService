@@ -4,8 +4,7 @@ WORKDIR /opt/app
 
 COPY ["package.json", "index.js", "./"]	
 
-RUN npm install \
-	&& npm install -g nodemon
+RUN npm install
 
 EXPOSE 3000
 

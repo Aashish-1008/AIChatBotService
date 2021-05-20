@@ -36,10 +36,11 @@ app.use(bodyParser.urlencoded({
 app.use('/api/chat-rooms/:chat_room_id', ReplyRouter);
 
 
-// error handling..
+// error handling
 app.use(handleErrors)
-
 
 app.listen(process.env.SERVER_PORT, () => {
 	console.log(`Server running at the port : ${process.env.SERVER_PORT}`);
 })
+
+module.exports = app

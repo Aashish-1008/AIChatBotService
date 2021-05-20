@@ -20,7 +20,7 @@ function getReplyMessage(intent) {
 	return new Promise(function(resolve, reject) {
 		if (intent['name'] == "INTENT_NOT_FOUND")
 			return resolve(Object.assign(intent, {
-				"text": "Sorry, I didn't get that. I am still learning."
+				"text": "AI could not give the correct answer. Either bot inferred confidence level below threshold confidence or intent is not recognised."
 			}))
 
 
@@ -31,7 +31,7 @@ function getReplyMessage(intent) {
 		}).then(function(intentReply) {
 			if (_.isEmpty(intentReply))
 				return resolve(Object.assign(intent, {
-					"text": `No reply found in database for intent: '${intentName}' .`
+					"text": `No reply found in database for intent: '${intent['name']}' .`
 				}))
 			return resolve(Object.assign(intent, intentReply['reply'].toObject()));
 		}).catch(function(err) {

@@ -2,9 +2,7 @@ const mongoose = require('mongoose');
 
 var intentReplySchema = mongoose.Schema({
     _id: {
-        type: String,
-        required: true,
-        unique: true
+        type: String
     },
     name: {
         type: String,

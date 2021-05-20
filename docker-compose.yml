@@ -19,7 +19,8 @@ services:
     depends_on:
       - mongodb
     volumes: 
-      - ./ai-assistant-api-server/src:/opt/app/src 
+      - ./ai-assistant-api-server/src:/opt/app/src
+      - ./ai-assistant-api-server/test:/opt/app/test 
     command: >
       sh -c "
         while ! nc -z mongodb 27017;

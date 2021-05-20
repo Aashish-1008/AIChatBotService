@@ -23,8 +23,7 @@ var ReplyController = module.exports = {
 function reply(req, res, next) {
 
 	let reqPayload = req.body,
-		reqParams = req.params,
-		reqQuery = req.query;
+		reqParams = req.params;
 
 
 	// 1. validate the incoming request data
@@ -36,7 +35,7 @@ function reply(req, res, next) {
 	// 2. Using publicly available api find the right intent for the message
 	IntentService.getAllIntentsOnMessage(reqParams['botId'], reqPayload['message']).then(function(intents) {
 		// 3. find the intent with high confidence and which is above the confidence Threshold	
-		const intent = IntentService.getHighConfidenceIntent(intents, reqQuery['confidenceThreshold'])
+		const intent = IntentService.getHighConfidenceIntent(intents, reqPayload['confidenceThreshold'])
 
 		// 4. Find the reply message from the database for the high confidence inferred intent.   
 		return ReplyMessageService.getReplyMessage(intent)

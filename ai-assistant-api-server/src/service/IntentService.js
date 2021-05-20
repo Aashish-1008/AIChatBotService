@@ -57,7 +57,12 @@ function getAllIntentsOnMessage(botId, message) {
 
 function getHighConfidenceIntent(intents, confidenceThreshold) {
 	let maxConfidenceIntent = _.maxBy(intents, 'confidence');
-	console.log(maxConfidenceIntent, confidenceThreshold)
+
+	if (_.isEmpty(maxConfidenceIntent))
+		return {
+			"name": 'INTENT_NOT_FOUND'
+		}
+
 	if (confidenceThreshold !== undefined) {
 		if (maxConfidenceIntent['confidence'] >= confidenceThreshold)
 			return maxConfidenceIntent
@@ -68,7 +73,5 @@ function getHighConfidenceIntent(intents, confidenceThreshold) {
 	} else {
 		return maxConfidenceIntent
 	}
-
-
 
 }

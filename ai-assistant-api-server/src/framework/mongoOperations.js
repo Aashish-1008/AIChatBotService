@@ -56,7 +56,7 @@ function findOneByQuery(collectionName, query, plainObject) {
 function bulkInsert(modelName, dumpData) {
 	return new Promise(function(resolve, reject) {
 		var model = mongoose.model(modelName)
-		model.remove({}, function(err, data) {
+		model.deleteMany({}, function(err, data) {
 			model.collection.insertMany(dumpData, onInsert);
 		})
 

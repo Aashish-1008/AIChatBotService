@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "45c65647-b264-45c5-8faf-3bf6052b5ca4",
+		"name": "ChatBotApiCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ChatBot Reply",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"Hello !!\",\n    \"confidenceThreshold\": 0.5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/chat-rooms/chat_room_id/bots/5f74865056d7bb000fcd39ff/reply",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"chat-rooms",
+						"chat_room_id",
+						"bots",
+						"5f74865056d7bb000fcd39ff",
+						"reply"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,6 +1,6 @@
 ## AI Chat Bot API Server
 
-#### Code Challenge Software Prerequisities:
+#### Software Prerequisites:
 1. Docker Installation, check docker installation guide here https://docs.docker.com/engine/install/
 2. Install make: Run this command in your macOS:  `brew install make`
  
@@ -20,3 +20,16 @@ Run command: `make ai-assistant-api-server-up`
 Please Note: It might take a while starting the server and running the test cases for the firsttime. The make command will build the docker image locally for the first time.
 
 
+#### How to Access the chat reply api
+##### Using Postman
+1. Import the collection `ChatBotApiCollection.postman_collection.json` file into postman. This file can be found under `AIChatBotService/postman` folder.
+2. Once Postman collection will be imported, it will list down the "POST ChatBot Reply" API. Call the api.
+
+##### Using curl
+1. Open the terminal
+2. Run this command `curl --location --request POST 'localhost:3000/api/chat-rooms/chat_room_id/bots/5f74865056d7bb000fcd39ff/reply' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "message": "Hello !!",
+    "confidenceThreshold": 0.5
+}'`

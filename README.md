@@ -1,4 +1,4 @@
-## AI Chat Bot API Server Setup
+## AI Chat Bot API Server
 
 #### Code Challenge Software Prerequisities:
 1. Docker Installation, check docker installation guide here https://docs.docker.com/engine/install/

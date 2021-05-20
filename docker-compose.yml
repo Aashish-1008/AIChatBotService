@@ -1,0 +1,44 @@
+version: "3"
+services:
+
+  ai-assistant-api-server:
+    container_name: ai-assistant-api-server
+    restart: always
+    build: 
+      context: ./ai-assistant-api-server
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - SERVER_PORT=3000
+      - DB_HOSTNAME=mongodb
+      - DB_PORT=27017
+      - DB_NAME=ChatAssistantDB
+      - ULTIMATE_AI_PUBLIC_API_URL=https://chat.ultimate.ai/api
+      - ULTIMATE_AI_API_KEY=825765d4-7f8d-4d83-bb03-9d45ac9c27c0
+    depends_on:
+      - mongodb
+    volumes: 
+      - ./ai-assistant-api-server/src:/opt/app/src 
+    command: >
+      sh -c "
+        while ! nc -z mongodb 27017;
+        do
+          echo Waiting for MongoDB server to up;
+          sleep 10;
+        done;
+        echo MongoDB Connected!;
+        npm run dev;
+      "  
+        
+  mongodb:
+    container_name: mongodb
+    hostname: mongodb
+    image: mongo:4.0
+    volumes:
+      - ./data:/data/db
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/logs  
+    ports:
+      - "27017:27017"

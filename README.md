@@ -23,7 +23,7 @@ Run command: `make ai-assistant-api-server-up`
 Please Note: It might take a while starting the server and running the test cases for the firsttime. The make command will build the docker image locally for the first time.
 
 
-#### How to make a request to the chatbot reply api
+#### How to call Chatbot reply api
 
 Make Sure ai-assistant-api-server up and running.
 
@@ -33,9 +33,7 @@ Make Sure ai-assistant-api-server up and running.
 
 ##### Using curl
 1. Open the terminal
-2. Run this command `curl --location --request POST 'localhost:3000/api/chat-rooms/chat_room_id/bots/5f74865056d7bb000fcd39ff/reply' \
---header 'Content-Type: application/json' \
---data-raw '{
+2. Run this command `curl --location --request POST 'localhost:3000/api/chat-rooms/chat_room_id/bots/5f74865056d7bb000fcd39ff/reply' --header 'Content-Type: application/json' --data-raw '{
     "message": "Hello !!",
     "confidenceThreshold": 0.5
 }'`

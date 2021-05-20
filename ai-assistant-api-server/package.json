@@ -1,11 +1,11 @@
 {
   "name": "ai-assistant-api-server",
   "version": "1.0.0",
-  "description": "AI chat bot service for customer queries.",
+  "description": "AI chat bot api server which replies to customer queries based by identifying intents.",
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec",
-    "start": "mocha --reporter spec; node index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "author": "",

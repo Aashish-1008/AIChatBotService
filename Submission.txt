@@ -17,10 +17,10 @@ Guides:
 3. How to Start the api-server 
 4. How to Stop the api-server
 5. How to Run the tests 
-6. How to make a request to the chatbot reply api 
+6. How to call Chatbot reply api 
 
 
-Please let me know if you faces any issues.
+Please let me know if you face any issues while code setup.
 
 Thanks,
 Aashish Dahiya

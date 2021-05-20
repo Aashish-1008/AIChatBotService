@@ -16,7 +16,6 @@ Database.init({
 		"reconnectInterval": 200,
 		"wtimeout": 100000,
 		"useNewUrlParser": true,
-		"poolSize": 10,
 		"autoReconnect": true
 	}
 });
